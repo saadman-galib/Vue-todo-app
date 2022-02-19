@@ -1,81 +1,81 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+    <div class="app-container">
+        <h1 class="app-title">Vuejs todos</h1>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+        <div class="composer">
+            <input
+                type="text"
+                placeholder="Type and hit enter..."
+                class="composer__input"
+            />
+            <div class="filter">
+                <div class="filter__left">
+                    <button class="filter__button filter__button--active">
+                        All (0)
+                    </button>
+                    <button class="filter__button">Pending (0)</button>
+                    <button class="filter__button">Done (0)</button>
+                </div>
+                <div>
+                    <button class="filter__button filter__button--danger">
+                        Clear
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="todos">
+            <!-- Todo start -->
+            <div class="todo">
+                <div class="todo__status-dot"></div>
+                <div>
+                    <p class="todo__content">sdfsa</p>
+                    <small class="todo__time">
+                        Wed Feb 09 2022 21:19:25 GMT+0600 (Bangladesh Standard
+                        Time)
+                    </small>
+                </div>
+            </div>
+            <!-- Todo end -->
+
+            <!-- Todo start -->
+            <div class="todo">
+                <div class="todo__status-dot"></div>
+                <div>
+                    <p class="todo__content">sdfsa</p>
+                    <small class="todo__time">
+                        Wed Feb 09 2022 21:19:25 GMT+0600 (Bangladesh Standard
+                        Time)
+                    </small>
+                </div>
+            </div>
+            <!-- Todo end -->
+
+            <!-- Todo start -->
+            <div class="todo todo--done">
+                <div class="todo__status-dot"></div>
+                <div>
+                    <p class="todo__content">sdfsa</p>
+                    <small class="todo__time">
+                        Wed Feb 09 2022 21:19:25 GMT+0600 (Bangladesh Standard
+                        Time)
+                    </small>
+                </div>
+            </div>
+            <!-- Todo end -->
+        </div>
     </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
 </template>
 
-<style>
-@import './assets/base.css';
+<script>
+import "./assets/tailwind.css";
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
-}
-
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
-
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-}
-</style>
+export default {
+    name: "TodoApp",
+    date() {
+        return {
+          
+        };
+    },
+};
+</script>
