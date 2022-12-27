@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "2.2.2",
-    "vite": "2.8.4",
+    "vite": "3.2.4",
     "vue-cli-plugin-tailwind": "2.2.18"
   }
 }
